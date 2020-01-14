@@ -1,6 +1,33 @@
 #include <iostream>
 #include <vector>
+#include <string>
+
 using namespace std;
+
+int reverse(int num)
+{
+    int hundreds, tens, ones;
+
+    hundreds = num/100;
+    num -= hundreds*100;
+    tens = num/10;
+    num -= tens*10;
+    ones = num;
+    
+    return ones*100 + tens*10 + hundreds;
+}
+
+int sum(int num)
+{
+    int hundreds, tens, ones;
+
+    hundreds = num/100;
+    num -= hundreds*100;
+    tens = num/10;
+    num -= tens*10;
+    ones = num;
+
+    return ones + tens + hundreds;
 
 int main() {
 
